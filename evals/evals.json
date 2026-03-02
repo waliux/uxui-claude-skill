@@ -1,0 +1,129 @@
+{
+  "skill_name": "uxui",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I'm designing an onboarding flow for a B2B SaaS product (project management tool). Users are dropping off after step 2 of 5. Step 1 asks for company name and team size. Step 2 asks them to invite teammates. Step 3 is a template chooser. Can you evaluate this flow and tell me what's likely causing the drop-off, and how to fix it?",
+      "expected_output": "A well-reasoned UX analysis identifying likely causes of drop-off at step 2 (forced invitation too early, before user sees value), grounded in heuristics like 'user control and freedom' and 'match between system and real world'. Should recommend deferring the invite step or making it optional, with clear rationale tied to user psychology. Should be structured, direct, and not padded with generic advice.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "identifies-premature-social-friction",
+          "description": "Identifies premature social commitment / asking for invites before user has seen value as the primary cause of drop-off",
+          "type": "content_check"
+        },
+        {
+          "id": "references-heuristics-or-principles",
+          "description": "Grounds analysis in a named UX framework, heuristic, or principle",
+          "type": "content_check"
+        },
+        {
+          "id": "recommends-reordering-or-skip",
+          "description": "Recommends either reordering the flow or making the invite step optional/skippable",
+          "type": "content_check"
+        },
+        {
+          "id": "ties-findings-to-user-impact",
+          "description": "At least one finding explicitly explains the user impact",
+          "type": "content_check"
+        },
+        {
+          "id": "structured-with-severity-or-priority",
+          "description": "Response has structure organizing findings by severity, priority, or logical grouping",
+          "type": "format_check"
+        },
+        {
+          "id": "actionable-recommendations",
+          "description": "Provides at least 2 concrete, actionable recommendations",
+          "type": "content_check"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Can you build me a notification toast component? It should support success, error, warning, and info states. I'm using React and Tailwind. It should auto-dismiss after 5 seconds but users should be able to close it manually too.",
+      "expected_output": "A complete, production-ready React + Tailwind toast component handling all 4 states with distinct visual treatment, auto-dismiss (5s), manual close, accessibility (role=alert), and a Design Notes section explaining key choices.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "all-four-states-implemented",
+          "description": "Component implements all four states: success, error, warning, and info with distinct visual treatment",
+          "type": "content_check"
+        },
+        {
+          "id": "auto-dismiss-5-seconds",
+          "description": "Implements auto-dismiss using setTimeout or useEffect with 5000ms delay",
+          "type": "content_check"
+        },
+        {
+          "id": "manual-close-button",
+          "description": "Includes a manual close/dismiss button",
+          "type": "content_check"
+        },
+        {
+          "id": "accessibility-aria",
+          "description": "Includes role=alert, aria-live, or aria-label on close button",
+          "type": "content_check"
+        },
+        {
+          "id": "uses-react-tailwind",
+          "description": "Code uses React hooks/JSX and Tailwind CSS utility classes",
+          "type": "content_check"
+        },
+        {
+          "id": "design-rationale-explained",
+          "description": "Response includes explanation of design decisions beyond just the code",
+          "type": "content_check"
+        },
+        {
+          "id": "cleanup-timer-on-unmount",
+          "description": "useEffect cleanup function clears the timer on unmount",
+          "type": "content_check"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need to create a design system color palette for a fintech app aimed at younger users (25-35). The brand wants to feel trustworthy but modern — not stuffy like traditional banks. Can you help me create a semantic color token system? I need primary, secondary, success, warning, error, and neutral scales, plus guidance on how to use each one.",
+      "expected_output": "A complete semantic color token system with 3 layers (primitive → semantic → component), all 6 scales, semantic naming, WCAG contrast info, brand reasoning, and usage guidance.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "semantic-naming-not-raw",
+          "description": "Token names use semantic/intent-based naming rather than raw color names",
+          "type": "content_check"
+        },
+        {
+          "id": "all-six-scales-present",
+          "description": "Includes all 6 required scales: primary, secondary, success, warning, error, and neutral",
+          "type": "content_check"
+        },
+        {
+          "id": "brand-reasoning-explained",
+          "description": "Explains WHY the chosen colors fit the brief (trustworthy + modern for younger fintech users)",
+          "type": "content_check"
+        },
+        {
+          "id": "wcag-contrast-mentioned",
+          "description": "References WCAG contrast ratios or accessibility compliance",
+          "type": "content_check"
+        },
+        {
+          "id": "three-layer-or-layered-architecture",
+          "description": "Demonstrates at least two levels of token hierarchy",
+          "type": "content_check"
+        },
+        {
+          "id": "usage-guidance-per-scale",
+          "description": "Includes usage guidance for how to apply each color role",
+          "type": "content_check"
+        },
+        {
+          "id": "actual-hex-values-provided",
+          "description": "Provides actual hex or HSL/RGB color values",
+          "type": "content_check"
+        }
+      ]
+    }
+  ]
+}
